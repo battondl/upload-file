@@ -17,7 +17,7 @@ import java.nio.file.StandardCopyOption;
 @Controller
 public class UploadController {
 
-    private final String UPLOAD_DIR = "./uploads/";
+    public final static String UPLOAD_DIR = System.getProperty("user.dir")+"/uploads";
 
     @GetMapping("/")
     public String homepage() {
